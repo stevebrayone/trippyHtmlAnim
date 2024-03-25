@@ -1,0 +1,99 @@
+<head>
+    <style>
+        #mainclass{
+            width:200px;
+            height:200px;
+            margin:100px auto;
+            perspective: 400px;
+        }
+        #boxclass{
+            width:200;
+            transform-style: preserve-3d;
+            animation:rotate 15s linear infinite;
+        }
+        #boxclass div{
+            position:absolute;
+            width:400px;
+            height:400px;
+            opacity:0.9;
+            color:white;
+        }
+        #top{
+            transform: rotateX(-90deg) translateY(-200px);
+            transform-origin: top;
+            background: black;
+            background-image: url("https://th.bing.com/th/id/OIP.i9O_gIigYlgERs7Ly_AoawHaFj?rs=1&pid=ImgDetMain");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #bottom{
+            transform: rotateX(90deg) translateY(200px);
+            transform-origin: bottom;
+            background: #101010;
+            background-image: url("https://th.bing.com/th/id/OIP.JsNijhK9C4nTZWTlLxNbrwHaFj?rs=1&pid=ImgDetMain");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #front{
+            transform: translateZ(200px);
+            background: black;
+            background-image: url("https://th.bing.com/th/id/OIP.bAaNcL1k1nLDrRPjvMLPmwHaEo?rs=1&pid=ImgDetMain");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #back{
+            transform: rotateY(180deg) translateZ(200px);
+            
+            background: #101010;
+            background-image: url("https://th.bing.com/th/id/OIP.LMsHeciQdDY6aOTf2SULpAHaEK?rs=1&pid=ImgDetMain");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #left{
+            transform: rotateY(-90deg) translateX(-200px);
+            transform-origin: left;
+            background: black;
+            background-image: url("https://www.edgyminds.com/wp-content/uploads/2017/05/Psychedelic-Art-by-Andrew-Ken-Stewart.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #right{
+            transform: rotateY(90deg) translateX(200px);
+            transform-origin: right;
+            background: #101010;
+            background-image: url("https://th.bing.com/th/id/OIP.AOaSNawEMLdQG3wPcrBVRQHaHa?w=900&h=900&rs=1&pid=ImgDetMain");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        @keyframes rotate{
+            0%{transform: rotateY(0);}
+            100%{transform:rotateY(360deg);}
+        }
+        .shadow{
+            width:400px;
+            height:400px;
+            background:rgba(0,0,0,0.5);
+            box-shadow:0 0 50px 50px rgba(0,0,0,0.5);
+            -webkit-transform: rotateX(90deg) translateZ(-250px) rotateY(180deg) translateX(0px);
+        }
+    </style>
+</head>
+<body>
+    <div id="mainclass">
+        <div id="boxclass">
+         <div id="front"></div>
+         <div id="back"></div>     
+         <div id="left"></div> 
+         <div id="right"></div> 
+         <div id="top"></div>
+         <div id="bottom"></div>
+         <div class="shadow"></div> 
+        </div>
+    </div>
+</body>
